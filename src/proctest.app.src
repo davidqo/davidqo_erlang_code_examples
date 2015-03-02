@@ -1,0 +1,16 @@
+{application, proctest,
+ [
+  {description, "An Erlang proctest library"},
+  {vsn, "1"},
+  {modules, [
+             proctest
+            ]},
+  {registered, []},
+  {mod, {proctest_app, []}},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  gproc
+                 ]},
+  {env, []}
+ ]}.

@@ -1,4 +1,4 @@
--module(gproc_race1).
+-module(gproc_race).
 
 -export([t/1, f/1]).
 -export([proc1/1, proc2/1]).
