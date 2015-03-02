@@ -1,0 +1,39 @@
+N senders sends in parallel 100 messages to N receivers.
+
+SENDING BY PID
+
+1> named_process_pid_test:t(10000).
+Done! Runtime: creating: 90 sending: 11590 WallClock: creating: 109, sending: 11351
+ok
+2> named_process_pid_test:t(10000).
+Done! Runtime: creating: 90 sending: 8890 WallClock: creating: 114, sending: 8578
+ok
+3> named_process_pid_test:t(10000).
+Done! Runtime: creating: 90 sending: 5470 WallClock: creating: 110, sending: 5166
+ok
+4> named_process_pid_test:t(10000).
+Done! Runtime: creating: 90 sending: 11860 WallClock: creating: 104, sending: 11593
+
+LOCAL REGISTRATION BY GPROC
+
+1> named_process_gproc_test:t(10000).
+Done! Runtime: creating: 190 sending: 16970 WallClock: creating: 153, sending: 16143
+ok
+2> named_process_gproc_test:t(10000).
+Done! Runtime: creating: 210 sending: 11140 WallClock: creating: 177, sending: 10282
+ok
+3> named_process_gproc_test:t(10000).
+Done! Runtime: creating: 210 sending: 11020 WallClock: creating: 179, sending: 9996
+ok
+
+ORDINARY ERLANG REGISTRATION USING DYNAMIC GENERATED ATOM
+
+1> named_process_registry_test:t(10000).
+Done! Runtime: creating: 110 sending: 8540 WallClock: creating: 131, sending: 7907
+ok
+2> named_process_registry_test:t(10000).
+Done! Runtime: creating: 110 sending: 11270 WallClock: creating: 113, sending: 10887
+ok
+3> named_process_registry_test:t(10000).
+Done! Runtime: creating: 70 sending: 8530 WallClock: creating: 123, sending: 8019
+ok
